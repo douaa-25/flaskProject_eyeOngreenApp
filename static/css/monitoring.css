@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('../img/login.png') center/cover no-repeat;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logout-btn {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: #B2FF59;
+    color: #2D531A;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+.chat-btn {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 50px;
+    background: #B2FF59;
+    color: #2D531A;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+.main-content {
+    display: flex;
+    padding: 30px;
+    height: calc(100vh - 80px);
+    box-sizing: border-box;
+}
+.table-title {
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2e7d32;
+    letter-spacing: 1px;
+}
+
+.sensor-table-container {
+    flex: 1;
+    background: rgba(255,255,255,0.9);
+    border-radius: 15px;
+    padding: 20px;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #aaa;
+    padding: 10px;
+    text-align: center;
+}
+
+.chat-panel {
+    width: 0;
+    overflow: hidden;
+    transition: width 0.4s;
+    background: rgba(255,255,255,0.95);
+    margin-left: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-panel.active {
+    width: 300px;
+}
+
+.chat-header {
+    font-weight: bold;
+    padding: 10px;
+    background: #B2FF59;
+    color: #2D531A;
+    border-radius: 10px 10px 0 0;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.chat-messages .message {
+    border: 1px solid #7CB342;
+    background: #E8F5E9;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #1B3A1A;
+}
+/* point rouge de notification */
+.chat-btn::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 12px;
+    height: 12px;
+    background-color: #FF0033;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: none;
+}
+
+/* afficher le point */
+.chat-btn.has-notification::after {
+    display: block;
+}
+
+

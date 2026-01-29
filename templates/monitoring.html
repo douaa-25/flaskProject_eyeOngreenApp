@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>surveillance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/monitoring.css') }}">
+    <script src="{{ url_for('static', filename='js/socket.io.min.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/monitoring.js') }}"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="{{ url_for('logout') }}" class="btn logout-btn">Logout</a>
+        <button id="toggle-msg" class="btn chat-btn">Channel Traffic</button>
+    </div>
+
+    <div class="main-content">
+        <!-- sensor table -->
+        <div class="sensor-table-container">
+             <h2 class="table-title">Sensors Data</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Node</th>
+                        <th>Temperature (°C)</th>
+                        <th>Humidity (%)</th>
+                        <th>Pressure (hPa)</th>
+                        <th>Air Quality (Gas)</th>
+                        <th>Date/Time</th>
+                    </tr>
+                </thead>
+                <tbody id="sensor-data"></tbody>
+            </table>
+        </div>
+
+        <!-- chat panel hidden by default -->
+        <div id="chat-panel" class="chat-panel">
+            <div class="chat-header">Channel Traffic</div>
+            <div id="messages" class="chat-messages"></div>
+        </div>
+    </div>
+</body>
+</html>

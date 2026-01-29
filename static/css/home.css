@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: url("../img/home-bg.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+.slogan {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    color: #2D531A;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    line-height: 1.4;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.slogan .line2 {
+    display: block;
+    margin-left: 60px;
+}
+
+.hero {
+    height: 100vh;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+/* zone bouton */
+.actions {
+    display: flex;
+}
+
+.actions a {
+    text-decoration: none;
+}
+
+/* login */
+.btn {
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    background: #B2FF59;
+    color: #2D531A;
+    box-shadow: 0 10px 20px rgba(102, 187, 106, 0.4);
+}
+
+.btn:hover {
+    transform: translateY(-6px) scale(1.03);
+}

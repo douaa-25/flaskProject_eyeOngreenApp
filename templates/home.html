@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+
+    <div class="slogan">
+        Keep Eye on Green<br>
+        <span class="line2"> Real-Time Monitoring & Protection</span>
+    </div>
+
+
+    <div class="hero">
+        <div class="actions">
+            <a href="{{ url_for('login') }}"><div class="btn login">Login</div></a>
+        </div>
+    </div>
+</body>
+</html>
